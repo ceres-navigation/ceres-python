@@ -26,7 +26,7 @@ We can now use this model to calculate the surface acceleration on Earth
 """
 
 import numpy as np
-from ceres.models.gravity import GravityField
+from ceres.gravity import GravityField
 
 class PointMass(GravityField):
     """This class provides an implementation of a point mass gravity field for calculating accelerations.

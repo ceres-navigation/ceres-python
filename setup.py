@@ -15,7 +15,7 @@ setup(name='ceres-nav',
       license='MIT',
       download_url='https://pypi.org/project/ceres-nav/',
       url='https://ceresnavigation.org/',
-      packages=['ceres','ceres.constants','ceres.objects','ceres.models','ceres.models.gravity'],
+      packages=['ceres','ceres.constants','ceres.gravity','ceres.rotations','ceres.sensors','ceres.utils'],
       project_urls={
         'Source': 'https://github.com/ceres-navigation/ceres',
         'Documentation': 'https://docs.ceresnavigation.org/',

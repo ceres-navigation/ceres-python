@@ -1,4 +1,4 @@
-from ceres.objects import Spacecraft, CelestialBody
+from ceres import Spacecraft, CelestialBody
 
 def test_spacecraft():
     sc = Spacecraft()

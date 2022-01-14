@@ -1,2 +1,2 @@
 [run]
-omit = ceres/models/gravity/gravityfield.py
+omit = ceres/gravity/gravityfield.py

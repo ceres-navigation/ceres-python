@@ -1,4 +1,4 @@
-from ceres.models.gravity import GravityField, PointMass
+from ceres.gravity import PointMass
 from ceres.constants import muEarth, rEarth
 import numpy as np
 
