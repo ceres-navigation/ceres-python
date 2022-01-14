@@ -22,7 +22,7 @@ Once installed, ceres can be imported using: `import ceres`
 ## Call for Contributions
 To contribute to this project, it is highly recommended that you create a virtual environment with either mamba or conda.
 1. Install mamba or conda:
-    - To install mamba (RECOMENDED): [mambaforge](https://github.com/conda-forge/miniforge)
+    - To install mamba (RECOMENDED): [mambaforge](https://github.com/conda-forge/miniforge#mambaforge)
     - To install conda: [anaconda](https://www.anaconda.com/products/individual)
 2. Create the virtual environment:
     - source the base environment
