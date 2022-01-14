@@ -26,8 +26,7 @@ To contribute to this project, it is highly recommended that you create a virtua
     - To install conda: [anaconda](https://www.anaconda.com/products/individual)
 2. Create the virtual environment:
     - source the base environment
-    - create `ceres_env` environment with ceres dependencies: `conda create -n ceres_env python=3 numpy`
-    - Install tools required for development: `pip install sphinx pytest pytest-cov sphinx-rtd-theme setuptools wheel twine`
+    - create `ceres_env` environment with ceres dependencies: `conda create -n ceres_env python=3 --file requirements.txt`
     - Activate the virtual environment with `conda activate ceres_env`
 3. Installing CERES into the environment:
    - Clone: `git clone https://github.com/ceres-navigation/ceres`
