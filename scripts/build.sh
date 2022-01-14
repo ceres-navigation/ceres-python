@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ..
 
 # Remove previous builds/dists:
 rm -rf dist/
