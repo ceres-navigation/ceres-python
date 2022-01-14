@@ -7,7 +7,7 @@
 [![PyPI version](https://badge.fury.io/py/ceres-nav.svg)](https://badge.fury.io/py/ceres-nav) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[CERES](https://ceresnavigation.org) is an API for aiding in the ismulation of spacecraft dynamics, and the devleopment of new navigation and mapping techniques.
+[CERES](https://ceresnavigation.org) is an API for aiding in the simulation of spacecraft dynamics, and the devleopment of new navigation and mapping techniques.
 
 Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while development is occuring on the [ceres GitHub page](https://github.com/ceres-navigation/ceres).  Any bugs should be reported to the [Issue Tracker](https://github.com/ceres-navigation/ceres/issues).  Documentation is located at [docs.ceresnavigation.org](https://docs.ceresnavigation.org)
 
@@ -33,7 +33,7 @@ To contribute to this project, it is highly recommended that you create a virtua
    - Clone: `git clone https://github.com/ceres-navigation/ceres`
    - Install: `cd ceres; pip install -e .`
 4. Running tests:
-   - `pytest --cov=ceres tests/`
+   - `pytest --cov-config=.coveragerc --cov=ceres tests/`
 
 If you are new to contributing to open source, [this
 guide](https://opensource.guide/how-to-contribute/) helps explain why, what,
