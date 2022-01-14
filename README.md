@@ -3,6 +3,7 @@
 
 ![Tests](https://github.com/ceres-navigation/ceres/actions/workflows/tests.yml/badge.svg)
 [![codecov](https://codecov.io/gh/ceres-navigation/ceres/branch/main/graph/badge.svg?token=BX07Q0PITB)](https://codecov.io/gh/ceres-navigation/ceres)
+![GitHub issues](https://img.shields.io/github/issues/ceres-navigation/ceres)
 [![PyPI version](https://badge.fury.io/py/ceres-nav.svg)](https://badge.fury.io/py/ceres-nav) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
