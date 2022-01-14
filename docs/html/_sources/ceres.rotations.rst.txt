@@ -1,0 +1,29 @@
+ceres.rotations package
+=======================
+
+Submodules
+----------
+
+ceres.rotations.quaternion module
+---------------------------------
+
+.. automodule:: ceres.rotations.quaternion
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ceres.rotations.rotationmatrix module
+-------------------------------------
+
+.. automodule:: ceres.rotations.rotationmatrix
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: ceres.rotations
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,29 @@
+ceres.gravity package
+=====================
+
+Submodules
+----------
+
+ceres.gravity.gravityfield module
+---------------------------------
+
+.. automodule:: ceres.gravity.gravityfield
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ceres.gravity.pointmass module
+------------------------------
+
+.. automodule:: ceres.gravity.pointmass
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: ceres.gravity
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,6 +1,17 @@
 ceres.sensors package
 =====================
 
+Submodules
+----------
+
+ceres.sensors.gyroscope module
+------------------------------
+
+.. automodule:: ceres.sensors.gyroscope
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

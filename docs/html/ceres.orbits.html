@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ceres.sensors package &mdash; CERES 0.0.1 documentation</title>
+  <title>ceres.orbits package &mdash; CERES 0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ceres.utils package" href="ceres.utils.html" />
-    <link rel="prev" title="ceres.rotations package" href="ceres.rotations.html" /> 
+    <link rel="next" title="ceres.rotations package" href="ceres.rotations.html" />
+    <link rel="prev" title="ceres.gravity package" href="ceres.gravity.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,9 +44,9 @@
 <li class="toctree-l3 current"><a class="reference internal" href="ceres.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="ceres.constants.html">ceres.constants package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ceres.gravity.html">ceres.gravity package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ceres.orbits.html">ceres.orbits package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ceres.orbits package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ceres.rotations.html">ceres.rotations package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">ceres.sensors package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ceres.sensors.html">ceres.sensors package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ceres.utils.html">ceres.utils package</a></li>
 </ul>
 </li>
@@ -76,9 +76,9 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="modules.html">ceres</a> &raquo;</li>
           <li><a href="ceres.html">ceres package</a> &raquo;</li>
-      <li>ceres.sensors package</li>
+      <li>ceres.orbits package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/ceres.sensors.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/ceres.orbits.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -86,22 +86,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ceres-sensors-package">
-<h1>ceres.sensors package<a class="headerlink" href="#ceres-sensors-package" title="Permalink to this headline"></a></h1>
+  <section id="ceres-orbits-package">
+<h1>ceres.orbits package<a class="headerlink" href="#ceres-orbits-package" title="Permalink to this headline"></a></h1>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
 </section>
-<section id="module-ceres.sensors.gyroscope">
-<span id="ceres-sensors-gyroscope-module"></span><h2>ceres.sensors.gyroscope module<a class="headerlink" href="#module-ceres.sensors.gyroscope" title="Permalink to this headline"></a></h2>
+<section id="module-ceres.orbits.twobody">
+<span id="ceres-orbits-twobody-module"></span><h2>ceres.orbits.twobody module<a class="headerlink" href="#module-ceres.orbits.twobody" title="Permalink to this headline"></a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="ceres.sensors.gyroscope.Gyroscope">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ceres.sensors.gyroscope.</span></span><span class="sig-name descname"><span class="pre">Gyroscope</span></span><a class="reference internal" href="_modules/ceres/sensors/gyroscope.html#Gyroscope"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ceres.sensors.gyroscope.Gyroscope" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ceres.orbits.twobody.TwoBody">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ceres.orbits.twobody.</span></span><span class="sig-name descname"><span class="pre">TwoBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RAAN</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ceres/orbits/twobody.html#TwoBody"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ceres.orbits.twobody.TwoBody" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ceres.orbits.twobody.TwoBody.mu">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mu</span></span><a class="headerlink" href="#ceres.orbits.twobody.TwoBody.mu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>
-<section id="module-ceres.sensors">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ceres.sensors" title="Permalink to this headline"></a></h2>
+<section id="module-ceres.orbits">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ceres.orbits" title="Permalink to this headline"></a></h2>
 </section>
 </section>
 
@@ -109,8 +114,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ceres.rotations.html" class="btn btn-neutral float-left" title="ceres.rotations package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ceres.utils.html" class="btn btn-neutral float-right" title="ceres.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ceres.gravity.html" class="btn btn-neutral float-left" title="ceres.gravity package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ceres.rotations.html" class="btn btn-neutral float-right" title="ceres.rotations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

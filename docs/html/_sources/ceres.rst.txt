@@ -8,9 +8,30 @@ Subpackages
    :maxdepth: 4
 
    ceres.constants
-   ceres.models
-   ceres.objects
+   ceres.gravity
+   ceres.orbits
+   ceres.rotations
    ceres.sensors
+   ceres.utils
+
+Submodules
+----------
+
+ceres.celestialbody module
+--------------------------
+
+.. automodule:: ceres.celestialbody
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ceres.spacecraft module
+-----------------------
+
+.. automodule:: ceres.spacecraft
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 Module contents
 ---------------

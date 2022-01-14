@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ceres package &mdash; CERES 0.0.1a2 documentation</title>
+  <title>ceres package &mdash; CERES 0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,7 +17,9 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ceres.constants package" href="ceres.constants.html" />
+    <link rel="prev" title="ceres" href="modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,15 +37,29 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">ceres package</a><ul>
-<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li><a class="reference internal" href="#module-ceres">Module contents</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ceres</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ceres package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ceres.constants.html">ceres.constants package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ceres.gravity.html">ceres.gravity package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ceres.orbits.html">ceres.orbits package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ceres.rotations.html">ceres.rotations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ceres.sensors.html">ceres.sensors package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ceres.utils.html">ceres.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ceres.celestialbody">ceres.celestialbody module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ceres.spacecraft">ceres.spacecraft module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ceres">Module contents</a></li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+</ul>
+
         </div>
       </div>
     </nav>
@@ -58,6 +74,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">ceres</a> &raquo;</li>
       <li>ceres package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/ceres.rst.txt" rel="nofollow"> View page source</a>
@@ -80,33 +97,69 @@
 <li class="toctree-l2"><a class="reference internal" href="ceres.constants.html#module-ceres.constants">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ceres.models.html">ceres.models package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ceres.models.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ceres.models.gravity.html">ceres.models.gravity package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ceres.models.gravity.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ceres.models.gravity.html#module-ceres.models.gravity.gravityfield">ceres.models.gravity.gravityfield module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ceres.models.gravity.html#module-ceres.models.gravity.pointmass">ceres.models.gravity.pointmass module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ceres.models.gravity.html#module-ceres.models.gravity">Module contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ceres.gravity.html">ceres.gravity package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ceres.gravity.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.gravity.html#module-ceres.gravity.gravityfield">ceres.gravity.gravityfield module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ceres.gravity.html#theory">Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ceres.gravity.html#use">Use</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.gravity.html#module-ceres.gravity.pointmass">ceres.gravity.pointmass module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ceres.gravity.html#id1">Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ceres.gravity.html#id2">Use</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ceres.models.html#module-ceres.models">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.gravity.html#module-ceres.gravity">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ceres.objects.html">ceres.objects package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ceres.objects.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ceres.objects.html#module-ceres.objects.celestialbody">ceres.objects.celestialbody module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ceres.objects.html#module-ceres.objects.spacecraft">ceres.objects.spacecraft module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ceres.objects.html#module-ceres.objects">Module contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ceres.orbits.html">ceres.orbits package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ceres.orbits.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.orbits.html#module-ceres.orbits.twobody">ceres.orbits.twobody module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.orbits.html#module-ceres.orbits">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ceres.rotations.html">ceres.rotations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ceres.rotations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.rotations.html#module-ceres.rotations.quaternion">ceres.rotations.quaternion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.rotations.html#module-ceres.rotations.rotationmatrix">ceres.rotations.rotationmatrix module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.rotations.html#module-ceres.rotations">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ceres.sensors.html">ceres.sensors package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ceres.sensors.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.sensors.html#module-ceres.sensors.gyroscope">ceres.sensors.gyroscope module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ceres.sensors.html#module-ceres.sensors">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ceres.utils.html">ceres.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ceres.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.utils.html#module-ceres.utils.spiceutils">ceres.utils.spiceutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceres.utils.html#module-ceres.utils">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-ceres.celestialbody">
+<span id="ceres-celestialbody-module"></span><h2>ceres.celestialbody module<a class="headerlink" href="#module-ceres.celestialbody" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ceres.celestialbody.CelestialBody">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ceres.celestialbody.</span></span><span class="sig-name descname"><span class="pre">CelestialBody</span></span><a class="reference internal" href="_modules/ceres/celestialbody.html#CelestialBody"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ceres.celestialbody.CelestialBody" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-ceres.spacecraft">
+<span id="ceres-spacecraft-module"></span><h2>ceres.spacecraft module<a class="headerlink" href="#module-ceres.spacecraft" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ceres.spacecraft.Spacecraft">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ceres.spacecraft.</span></span><span class="sig-name descname"><span class="pre">Spacecraft</span></span><a class="reference internal" href="_modules/ceres/spacecraft.html#Spacecraft"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ceres.spacecraft.Spacecraft" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
 </section>
 <section id="module-ceres">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ceres" title="Permalink to this headline"></a></h2>
@@ -116,7 +169,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="ceres" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ceres.constants.html" class="btn btn-neutral float-right" title="ceres.constants package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
