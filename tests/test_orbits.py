@@ -6,6 +6,6 @@ def test_twobody():
     e = 1
     i = 1
     w = 1
-    W = 1
+    RAAN = 1
     ma = 1
-    orbit = TwoBody(muSun,a=a,e=e,i=i,w=w,W=W,ma=ma)
+    orbit = TwoBody(muSun,a=a,e=e,i=i,w=w,RAAN=RAAN,ma=ma)
