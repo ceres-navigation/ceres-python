@@ -1,0 +1,10 @@
+ceres.sensors package
+=====================
+
+Module contents
+---------------
+
+.. automodule:: ceres.sensors
+   :members:
+   :undoc-members:
+   :show-inheritance:

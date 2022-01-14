@@ -1,0 +1,7 @@
+ceres
+=====
+
+.. toctree::
+   :maxdepth: 4
+
+   ceres

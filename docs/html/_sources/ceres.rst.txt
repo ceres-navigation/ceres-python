@@ -1,0 +1,21 @@
+ceres package
+=============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   ceres.constants
+   ceres.models
+   ceres.objects
+   ceres.sensors
+
+Module contents
+---------------
+
+.. automodule:: ceres
+   :members:
+   :undoc-members:
+   :show-inheritance:

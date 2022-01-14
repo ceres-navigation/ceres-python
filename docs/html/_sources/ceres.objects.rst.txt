@@ -1,0 +1,29 @@
+ceres.objects package
+=====================
+
+Submodules
+----------
+
+ceres.objects.celestialbody module
+----------------------------------
+
+.. automodule:: ceres.objects.celestialbody
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ceres.objects.spacecraft module
+-------------------------------
+
+.. automodule:: ceres.objects.spacecraft
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: ceres.objects
+   :members:
+   :undoc-members:
+   :show-inheritance:
