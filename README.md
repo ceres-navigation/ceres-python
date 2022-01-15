@@ -17,7 +17,7 @@
 Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while development is occuring on the [ceres GitHub page](https://github.com/ceres-navigation/ceres).  Any bugs should be reported to the [Issue Tracker](https://github.com/ceres-navigation/ceres/issues).  Documentation is located at [docs.ceresnavigation.org](https://docs.ceresnavigation.org)
 
 
-## Install
+# Install
 - **Install:** 
     - `pip install ceres-nav`
 - **Import:** 
@@ -25,14 +25,19 @@ Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while deve
 
 *To install from source for development purposes, please see the [Develop](#develop) section.*
 
-### Additional Steps for Windows Subsystem for Linux
-*NOTE: This is required in order to graphically display outputs from WSL2.  This may not be necessary for certain Windows 11 builds*
+## Additional Steps for Windows Subsystem for Linux
+### Windows 11 Insider (RECOMMENDED):
+- [Install support for Linux GUI apps](https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps)
+
+### Windows 10/11:
+*NOTE: This is required in order to graphically display outputs from WSL2.*
 
 - Downalod and install [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
 - Run `sudo apt-get install python-tk`
 - Add `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0` to the bottom of your `~/.bashrc` file
 - In windows settings, go to `Firewall & network protection` -> `Allow an app through firewall` and make sure that VcXsrv has both public and private checked.
 - Launch VcXsrv with "Disable access control" ticked.
+
 
 ## Develop
 To contribute to this project, it is highly recommended that you create a virtual environment with either mamba or conda.
@@ -53,9 +58,9 @@ If you are new to contributing to open source, [this
 guide](https://opensource.guide/how-to-contribute/) helps explain why, what,
 and how to successfully get involved.
 
-## Contact
+# Contact
 All questionsm, comments, and concerns should be directed to Chris Gnam: crgnam@buffalo.edu
 
-## Attributions
-### Solar System Scope
+# Attributions
+## Solar System Scope
 [Solar System Scope](https://www.solarsystemscope.com) provides free textures of celestial bodies, licensed under the [Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).  These textures are used in CERES for visualization purposes, and were obtained from: https://www.solarsystemscope.com/textures/.  No alterations were made to these textures, and all copyright belongs to Solar System Scope.
