@@ -21,8 +21,10 @@ keyring==23.5.0
 MarkupSafe==2.0.1
 numpy==1.22.0
 packaging==21.3
+pandas==1.3.5
 pip==21.3.1
 pkginfo==1.8.2
+plotly==5.5.0
 pluggy==1.0.0
 py==1.11.0
 pycparser==2.21
@@ -30,6 +32,7 @@ Pygments==2.11.2
 pyparsing==3.0.6
 pytest==6.2.5
 pytest-cov==3.0.0
+python-dateutil==2.8.2
 pytz==2021.3
 readme-renderer==32.0
 recommonmark==0.7.1
@@ -46,6 +49,7 @@ setuptools==60.5.0
 six==1.16.0
 snowballstemmer==2.2.0
 Sphinx==4.3.2
+sphinx-autodoc-typehints==1.15.2
 sphinx-rtd-theme==1.0.0
 sphinxcontrib-applehelp==1.0.2
 sphinxcontrib-devhelp==1.0.2
@@ -54,6 +58,7 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 spiceypy==4.0.3
+tenacity==8.0.1
 toml==0.10.2
 tomli==2.0.0
 tqdm==4.62.3

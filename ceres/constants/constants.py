@@ -27,8 +27,9 @@ rNeptune = 24622
 # Physical constants:
 c = 299792458/1000 #(km/s)
 G = (6.67430E-11)/(1000**3) #(km^3/kg*s^2)
-spd  = 86400
-spsd = 23*3600 + 56*60 + 4.1
+AU = 149597870.700 #(km)
+SPD  = 86400
+SPSD = 23*3600 + 56*60 + 4.1
 
 # Conversions:
 miles2km = 1.609344
