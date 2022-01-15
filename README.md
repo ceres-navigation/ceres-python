@@ -54,3 +54,7 @@ and how to successfully get involved.
 
 ## Contact
 All questionsm, comments, and concerns should be directed to Chris Gnam: crgnam@buffalo.edu
+
+## Attributions
+### Solar System Scope
+[Solar System Scope](https://www.solarsystemscope.com) provides free textures of celestial bodies, licensed under the [Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).  These textures are used in CERES for visualization purposes, and were obtained from: https://www.solarsystemscope.com/textures/.  No alterations were made to these textures, and all copyright belongs to Solar System Scope.
