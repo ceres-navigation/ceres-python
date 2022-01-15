@@ -3,4 +3,4 @@
 ./update_requirements
 ./build.sh
 ./test.sh
-./docsgen.sh
+#./docsgen.sh
