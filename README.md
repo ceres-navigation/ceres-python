@@ -1,5 +1,5 @@
 # CERES
-**C**elestial **E**stimation for **R**esearch, **E**xploration, and **S**cience
+**C**elestial **E**stimation for **R**esearch, **E**xploration, and **S**imulation
 
 ![Tests](https://github.com/ceres-navigation/ceres/actions/workflows/tests.yml/badge.svg)
 [![codecov](https://codecov.io/gh/ceres-navigation/ceres/branch/main/graph/badge.svg?token=BX07Q0PITB)](https://codecov.io/gh/ceres-navigation/ceres)
@@ -7,19 +7,33 @@
 [![PyPI version](https://badge.fury.io/py/ceres-nav.svg)](https://badge.fury.io/py/ceres-nav) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[CERES](https://ceresnavigation.org) is an API for aiding in the simulation of spacecraft dynamics, and the devleopment of new navigation and mapping techniques.
+[CERES](https://ceresnavigation.org) provides an API for:
+- Simulating spacecraft dynamics
+- Developing new navigation and mapping algorithms
+- Modeling sensors and other measurements
+- Implementing kalman filters and other estimation schemes
 
 Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while development is occuring on the [ceres GitHub page](https://github.com/ceres-navigation/ceres).  Any bugs should be reported to the [Issue Tracker](https://github.com/ceres-navigation/ceres/issues).  Documentation is located at [docs.ceresnavigation.org](https://docs.ceresnavigation.org)
 
-*NOTE: Currently, CERES is only supported on Linux.  Native Windows support is coming soon, though WSL2 (available on both Windows 10 and 11) is already supported.*
-
 
 ## Install
-`pip install ceres-nav`
+- **Install:** 
+    - `pip install ceres-nav`
+- **Import:** 
+    - `import ceres`
 
-Once installed, ceres can be imported using: `import ceres`
+*To install from source for development purposes, please see the [Develop](#develop) section.*
 
-## Call for Contributions
+### Additional Steps for Windows Subsystem for Linux
+*NOTE: This is required in order to graphically display outputs from WSL2.  This may not be necessary for certain Windows 11 builds*
+
+- Downalod and install [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
+- Run `sudo apt-get install python-tk`
+- Add `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0` to the bottom of your `~/.bashrc` file
+- In windows settings, go to `Firewall & network protection` -> `Allow an app through firewall` and make sure that VcXsrv has both public and private checked.
+- Launch VcXsrv with "Disable access control" ticked.
+
+## Develop
 To contribute to this project, it is highly recommended that you create a virtual environment with either mamba or conda.
 1. Install mamba or conda:
     - To install mamba (RECOMENDED): [mambaforge](https://github.com/conda-forge/miniforge#mambaforge)
@@ -39,4 +53,4 @@ guide](https://opensource.guide/how-to-contribute/) helps explain why, what,
 and how to successfully get involved.
 
 ## Contact
-All questions should be directed to Chris Gnam: crgnam@buffalo.edu
+All questionsm, comments, and concerns should be directed to Chris Gnam: crgnam@buffalo.edu
