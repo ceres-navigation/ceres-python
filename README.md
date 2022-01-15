@@ -8,7 +8,7 @@
 [![PyPI version](https://badge.fury.io/py/ceres-nav.svg)](https://pypi.org/project/ceres-nav/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[CERES](https://ceresnavigation.org) provides an API for:
+[CERES](https://ceresnavigation.org) provides a python API for:
 - Simulating spacecraft dynamics
 - Developing new navigation and mapping algorithms
 - Modeling sensors and other measurements
@@ -18,20 +18,18 @@ Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while deve
 
 
 # Install
-- **Install:** 
-    - `pip install ceres-nav`
-- **Import:** 
-    - `import ceres`
+- **Install:**  `pip install ceres-nav`
+- **Import:**  `import ceres`
 
-*To install from source for development purposes, please see the [Develop](#develop) section.*
+*To install from source for development purposes, please see the [Develop and Contribute](#develop-and-contribute) section.*
 
 ## Additional Steps for Windows Subsystem for Linux
+*This is required in order to graphically display outputs from WSL2*
+
 ### Windows 11 Insider (RECOMMENDED):
 - [Install support for Linux GUI apps](https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps)
 
 ### Windows 10/11:
-*NOTE: This is required in order to graphically display outputs from WSL2.*
-
 - Downalod and install [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
 - Run `sudo apt-get install python-tk`
 - Add `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0` to the bottom of your `~/.bashrc` file
@@ -39,7 +37,7 @@ Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while deve
 - Launch VcXsrv with "Disable access control" ticked.
 
 
-## Develop
+# Develop and Contribute
 To contribute to this project, it is highly recommended that you create a virtual environment with either mamba or conda.
 1. Install mamba or conda:
     - To install mamba (RECOMENDED): [mambaforge](https://github.com/conda-forge/miniforge#mambaforge)
