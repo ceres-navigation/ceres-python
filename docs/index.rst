@@ -11,6 +11,8 @@ Welcome to CERES's documentation!
    :caption: Contents:
 
    modules
+   custom_docs/install
+   custom_docs/examples
 
 Indices and tables
 ==================
