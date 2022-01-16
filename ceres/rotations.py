@@ -1,41 +1,58 @@
 import numpy as np
-from typing import Union, Tuple
+from typing import Optional, Union, Tuple
 
 class Rotation:
-    def __init__(self,input_type: str, parameters: Union[np.ndarray, Tuple[Union[str,np.ndarray], np.ndarray]]):
+    def __init__(self,input_type: Optional[str] = None, input_value: Optional[Union[np.ndarray, Tuple[Union[str,np.ndarray], np.ndarray]]] = None):
         """
         """
+        if input_type is None:
+            assert input_value is None, 'TODO'
+        if input_value is None:
+            assert input_type is None, 'TODO'
+
+        if input_type is None:
+            self._matrix = np.eye(3)
+            return
+
         assert type(input_type) is str, 'TODO'
-        assert len(parameters) >= 1, 'TODO'
+        assert len(input_value) >= 1, 'TODO'
         
         if input_type.lower() == 'matrix':
-            assert type(parameters) is np.ndarray, 'TODO'
-            assert parameters.shape == (3,3), 'TODO'
-            self._matrix = parameters
+            assert type(input_value) is np.ndarray, 'TODO'
+            assert input_value.shape == (3,3), 'TODO'
+            self._matrix = input_value
 
         elif input_type.lower() == 'quaternion':
-            assert type(parameters) is np.ndarray, 'TODO'
-            assert parameters.shape == (4,1) or parameters.shape == (4,), 'TODO'
-            self._matrix = Rotation.quaternion_to_matrix(parameters)
+            assert type(input_value) is np.ndarray, 'TODO'
+            assert input_value.shape == (4,1) or input_value.shape == (4,), 'TODO'
+            self._matrix = Rotation.quaternion_to_matrix(input_value)
 
         elif input_type.lower() == 'eulerangles':
-            assert type(parameters) is tuple, 'TODO'
-            assert len(parameters) == 2, 'TODO'
-            sequence = parameters[0]
-            angles   = parameters[1]
+            assert type(input_value) is tuple, 'TODO'
+            assert len(input_value) == 2, 'TODO'
+            sequence = input_value[0]
+            angles   = input_value[1]
             assert type(sequence) is str and len(sequence) == 3, 'TODO'
             assert type(angles) is np.ndarray, 'TODO'
             assert angles.size == 3, 'TODO'
             self._matrix = Rotation.eulerangles_to_matrix(sequence, angles)
 
         elif input_type.lower() == 'axisangle':
-            assert type(parameters) is tuple, 'TODO'
-            assert len(parameters) == 2, 'TODO'
-            axis   = parameters[0]
-            angle = parameters[1]
+            assert type(input_value) is tuple, 'TODO'
+            assert len(input_value) == 2, 'TODO'
+            axis   = input_value[0]
+            angle = input_value[1]
             assert type(axis) is np.ndarray and type(angle) is float, 'TODO'
             assert axis.size == 3 and angle.size == 1, 'TODO'
             self._matrix = Rotation.axisangle_to_matrix(axis,angle)
+
+    @property
+    def matrix(self):
+        return self._matrix
+
+    @property
+    def quaternion(self):
+        return None
 
 
     @staticmethod
