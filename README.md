@@ -28,14 +28,18 @@ Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while deve
 
 ### Windows 11 Insider (RECOMMENDED):
 - [Install support for Linux GUI apps](https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps)
+    - These steps will walk you through installing the Windows 11 insider build, and installing/updating WSL2 so that Linux GUIs can be used without the need for an X server.
+- Add `export BROWSER="/mnt/c/PATH/TO/BROWSER.EXE"` to the bottom of your `~/.bashrc` file
+    - This is required for using `plotly` visualizations.
 
 ### Windows 10/11:
 - Downalod and install [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
 - Run `sudo apt-get install python-tk`
 - Add `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0` to the bottom of your `~/.bashrc` file
+- Add `export BROWSER="/mnt/c/PATH/TO/BROWSER.EXE"` to the bottom of your `~/.bashrc` file
+    - This is required for using `plotly` visualizations.
 - In windows settings, go to `Firewall & network protection` -> `Allow an app through firewall` and make sure that VcXsrv has both public and private checked.
 - Launch VcXsrv with "Disable access control" ticked.
-
 
 # Develop and Contribute
 To contribute to this project, it is highly recommended that you create a virtual environment with either mamba or conda.
