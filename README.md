@@ -56,13 +56,14 @@ To contribute to this project, it is highly recommended that you create a virtua
 4. Running tests:
    - `pytest --cov-config=.coveragerc --cov=ceres tests/`
 
-If you are new to contributing to open source, [this
-guide](https://opensource.guide/how-to-contribute/) helps explain why, what,
-and how to successfully get involved.
+## Message to Developers:
+We  work on the `develop` branch and only push releases to `master`.  Please base all pull requests on `develop`.
 
-# Contact
-All questionsm, comments, and concerns should be directed to Chris Gnam: crgnam@buffalo.edu
+If you are new to contributing to open source, [this guide](https://opensource.guide/how-to-contribute/) helps explain why, what, and how to successfully get involved.
 
 # Attributions
 ## Solar System Scope
 [Solar System Scope](https://www.solarsystemscope.com) provides free textures of celestial bodies, licensed under the [Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).  These textures are used in CERES for visualization purposes, and were obtained from: https://www.solarsystemscope.com/textures/.  No alterations were made to these textures, and all copyright belongs to Solar System Scope.
+
+# Contact
+All questionsm, comments, and concerns should be directed to Chris Gnam: crgnam@buffalo.edu
