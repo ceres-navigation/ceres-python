@@ -1,10 +1,11 @@
-from ceres.rotations import Rotation
+from ceres import eulerangles_to_matrix
 import numpy as np
 
 def test_rotation():
-    r = Rotation()
-    assert (r.matrix == np.eye(3)).all()
-
-    assert (r.quaternion == np.array([0,0,0,1])).all()
+    seq = '321'
+    angles = np.array([1,1,1])
+    matrix = eulerangles_to_matrix(seq, angles)
+    assert type(matrix) is np.ndarray
+    assert matrix.shape == (3,3)
 
 test_rotation()

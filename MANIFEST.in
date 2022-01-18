@@ -1,0 +1,1 @@
+recursive-include ceres/plotting/textures/ *.jpg

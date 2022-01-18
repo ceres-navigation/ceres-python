@@ -61,7 +61,11 @@ We  work on the `develop` branch and only push releases to `master`.  Please bas
 
 If you are new to contributing to open source, [this guide](https://opensource.guide/how-to-contribute/) helps explain why, what, and how to successfully get involved.
 
-# Attributions
+***
+# Attributions and Acknowledgements
+## National Science Foundation Graduate Research Fellowship
+This material is based upon work supported by the [National Science Foundation Graduate Research Fellowship](https://www.nsfgrfp.org/) under Grant No. 2020305048.  NSF GRFP gave Chris Gnam the flexibility and resources required to complete his research in spacecraft navigaiton, and this project is meant to serve as an open source implementation of his dissertation.
+
 ## Solar System Scope
 [Solar System Scope](https://www.solarsystemscope.com) provides free textures of celestial bodies, licensed under the [Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).  These textures are used in CERES for visualization purposes, and were obtained from: https://www.solarsystemscope.com/textures/.  No alterations were made to these textures, and all copyright belongs to Solar System Scope.
 

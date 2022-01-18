@@ -9,7 +9,7 @@ rm -rf docs/doctrees
 mv docs/index.rst.keep docs/index.rst
 
 # Force rebuild:
-sphinx-apidoc --force -o docs/ ceres/
+sphinx-apidoc --force -o docs/ ceres/ --separate --module-first
 
 # Make the HTML output:
 cd docs/

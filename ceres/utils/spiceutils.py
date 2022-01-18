@@ -1,1 +1,0 @@
-import spiceypy as spice

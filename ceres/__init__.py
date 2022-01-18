@@ -1,5 +1,8 @@
-__version__ = '0.0.1'
+"""Hello from the future
+"""
 
-from .spacecraft import Spacecraft
-from .celestialbody import CelestialBody
-from .rotations import Rotation
+__version__ = '0.0.1a8'
+
+from .rigidbody import RigidBody
+from .keplerorbit import KeplerOrbit
+from .rotation import *

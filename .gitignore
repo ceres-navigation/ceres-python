@@ -1,3 +1,6 @@
+# Ignore spice kernels:
+examples/kernels/*
+
 # Spinx ignore:
 *.rst
 docs/doctrees

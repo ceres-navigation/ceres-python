@@ -1,10 +1,6 @@
-from ceres import Spacecraft, CelestialBody
+from ceres import RigidBody
 
-def test_spacecraft():
-    sc = Spacecraft()
+def test_rigidbody():
+    return
 
-def test_celestialbody():
-    cb = CelestialBody()
-
-test_spacecraft()
-test_celestialbody()
+test_rigidbody()
