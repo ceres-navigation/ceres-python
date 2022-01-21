@@ -1,10 +1,10 @@
 import numpy as np
 from typing import Union, Sequence, Optional
 
-from ceres.gravity import GravityField
+from ceres.environment.gravity import GravityField
 from ceres.spiceutils import SpiceOrbit, SpiceRotation
 
-class RigidBody():
+class Body():
     """
     """
     def __init__(self, et: float = 0,
@@ -106,7 +106,7 @@ class RigidBody():
         self._rotation_log[:,:,idx] = self._rotation
         
 
-class CelestialBody(RigidBody):
+class CelestialBody(Body):
     """
     """
     def __init__(self, gravity: Optional[GravityField] = None, **kwds):
@@ -121,7 +121,7 @@ class CelestialBody(RigidBody):
 
 
 
-class Spacecraft(RigidBody):
+class Spacecraft(Body):
     """
     """
     def __init__(self, actuators: list = [], **kwds):

@@ -28,7 +28,7 @@ We can now use this model to calculate the surface acceleration on Earth
 import numpy as np
 from typing import Union, Sequence
 
-from ceres.gravity import GravityField
+from ceres.environment.gravity import GravityField
 
 class PointMass(GravityField):
     """This class provides an implementation of a point mass gravity field for calculating accelerations.
@@ -49,6 +49,8 @@ class PointMass(GravityField):
         return
 
     def get_acceleration(self,object_position):
+        if object_position.ndim == 1:
+            object_position = object_position.reshape((3,1))
         r_vec = object_position - self._position
         acceleration = -self._mu/(np.linalg.norm(r_vec)**3)*r_vec
         return acceleration

@@ -1,4 +1,4 @@
-from ceres import RigidBody
+from ceres import Body
 
 def test_rigidbody():
     return

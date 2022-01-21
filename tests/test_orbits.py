@@ -1,4 +1,4 @@
-from ceres import KeplerOrbit
+from ceres.keplerorbits import elements_to_state
 from ceres.constants import muSun,AU,SPD
 import numpy as np
 
@@ -14,7 +14,7 @@ def test_twobody():
 
     # Create the orbit instance:
     elements = np.array([a,e,i,peri,RAAN,M])
-    orbit = KeplerOrbit(muSun,elements,epoch,degrees=True)
+    states = elements_to_state(muSun,elements,0)
     
 
 test_twobody()

@@ -1,4 +1,4 @@
-from ceres import eulerangles_to_matrix
+from ceres.rotations import eulerangles_to_matrix
 import numpy as np
 
 def test_rotation():
