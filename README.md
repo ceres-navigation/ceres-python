@@ -1,7 +1,7 @@
 # CERES
 **C**elestial **E**stimation for **R**esearch, **E**xploration, and **S**imulation
 
-![Tests](https://github.com/ceres-navigation/ceres/actions/workflows/tests.yml/badge.svg)
+[![Tests](https://github.com/ceres-navigation/ceres/actions/workflows/tests.yml/badge.svg)](https://github.com/ceres-navigation/ceres/actions)
 [![codecov](https://codecov.io/gh/ceres-navigation/ceres/branch/main/graph/badge.svg?token=BX07Q0PITB)](https://codecov.io/gh/ceres-navigation/ceres)
 [![GitHub issues](https://img.shields.io/github/issues/ceres-navigation/ceres)](https://github.com/ceres-navigation/ceres/issues)
 [![GitHub Release](https://img.shields.io/github/v/release/ceres-navigation/ceres)](https://github.com/ceres-navigation/ceres/releases)
