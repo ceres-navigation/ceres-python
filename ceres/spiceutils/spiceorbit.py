@@ -1,7 +1,7 @@
 """
 """
 from ceres.constants import muSun
-from ceres import KeplerOrbit
+from ceres.keplerorbit import period, states_to_elements
 from ceres.spiceutils import time_to_et
 import spiceypy as spice
 import numpy as np
@@ -36,6 +36,5 @@ class SpiceOrbit:
     def period(self,reference_time: Union[str,float,date], primary_body: str='SUN', mu: float =muSun):
         et = time_to_et(reference_time)
         orbital_states,_ = spice.spkezr(self._targ,et,'J2000','NONE',primary_body)
-        elements = KeplerOrbit.states_to_elements(mu,orbital_states)
-        orbit = KeplerOrbit(mu,elements,0)
-        return orbit.period
+        elements = states_to_elements(mu,orbital_states,0)
+        return period(mu,elements[0])

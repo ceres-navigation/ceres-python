@@ -23,6 +23,7 @@ class GravityField(metaclass=ABCMeta):
     def __init__(self,mu):
         """
         """
+        self._parent
         return
 
     @abstractmethod
@@ -30,3 +31,6 @@ class GravityField(metaclass=ABCMeta):
         """
         """
         return 
+    
+    def set_parent(self,parent):
+        self._parent = parent

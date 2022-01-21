@@ -21,7 +21,7 @@ def furnsh_directory(path_to_directory):
 def time_to_et(input_time):
     """
     """
-    if type(input_time) is float or type(input_time) is np.ndarray:
+    if type(input_time) in [np.float64, float, np.ndarray, int]:
         et = input_time
 
     elif type(input_time) is str:

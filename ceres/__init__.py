@@ -3,6 +3,8 @@
 
 __version__ = '0.0.1a8'
 
-from .rigidbody import RigidBody
-from .keplerorbit import KeplerOrbit
+from .keplerorbit import *
+from .rigidbody import RigidBody, CelestialBody, Spacecraft
 from .rotation import *
+from .dynamics import rk4, simple_orbit
+from .scene import Scene

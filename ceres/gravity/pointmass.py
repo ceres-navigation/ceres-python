@@ -26,6 +26,8 @@ We can now use this model to calculate the surface acceleration on Earth
 """
 
 import numpy as np
+from typing import Union, Sequence
+
 from ceres.gravity import GravityField
 
 class PointMass(GravityField):
@@ -33,12 +35,13 @@ class PointMass(GravityField):
 
     The :class:`PointMass`
     """
-    def __init__(self, mu, position=np.array([0,0,0])):
+    def __init__(self, mu, position: Union[Sequence, np.ndarray] = [0,0,0]):
         """
         The __init__ method may be 
         """
         self._mu = mu
-        self._position = position
+        position = np.asarray(position)
+        self._position = position.reshape((3,1))
         return
 
     def set_position(self,position):

@@ -33,7 +33,7 @@ def plotly_orbit(orbit: np.ndarray, name=None, fig=None, line_color = 'black', l
     if fig is None:
         fig = go.Figure()        
 
-    trace = go.Scatter3d(x=orbit[0,:], y=orbit[1,:], z=orbit[2,:],name=name,
+    trace = go.Scatter3d(x=orbit[0,:].flatten(), y=orbit[1,:].flatten(), z=orbit[2,:].flatten(),name=name,
                          marker=dict(size=0.1), line=dict(color=line_color, width=line_width))
 
     # Add trace to the figure:
