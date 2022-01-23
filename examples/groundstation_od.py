@@ -1,29 +1,25 @@
 """
 """
-from re import sub
-from matplotlib.pyplot import plot
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
 
-from ceres.constants import muEarth
-from ceres.plotting import plotly_orbit, plotly_planets
-
-from ceres import RigidBody, CelestialBody, Spacecraft, Scene
-from ceres.gravity import PointMass
+from ceres import CelestialBody, Spacecraft, TruthScene, EventsPlan
+from ceres.constants import G, muEarth
+from ceres.environment.gravity import PointMass
+from ceres.plotting import plotly_orbit, plotly_planets, plotly_axisequal
 from ceres.spiceutils import furnsh_directory, SpiceRotation
-from ceres.keplerorbit import elements_to_state
+from ceres.keplerorbits import elements_to_state
+from ceres.dynamics import rk4
+from ceres.sensors import Radio, Antenna
 
 
 # Define the equations of motion:
-def simple(dt, X, earth):
-    """
-    """
-    # Recover the states:
+def simple(dt, X, *argv):
     r = X[:3]
     v = X[3:]
 
-    # Update the position of the earth:
-    earth.rotation(dt=dt)
+    # Unpack the models needed:
+    earth = argv[0]
 
     # Get the acceleration:
     a = earth.gravity.get_acceleration(r)
@@ -37,42 +33,55 @@ def dynamics(t_step, dt, objects):
     earth = objects[0]
     sat = objects[1]
 
-    # Update earth based on the current time:
-    earth.update_et(t_step)
-
     # Create the state vector:
     X = sat.state()
 
     # Run the RK4 algorithm:
-    k1 = dt*simple(0, X, earth)
-    k2 = dt*simple(0.5*dt, X + 0.5*k1, earth)
-    k3 = dt*simple(0.5*dt, X + 0.5*k2, earth)
-    k4 = dt*simple(dt, X + k3, earth)
-    X = X + (1/6)*(k1 + 2*k2 + 2*k3 + k4)
+    X = rk4(simple,dt,X, earth)
 
     sat.set_state(X)
     return 
 
-# Furnsh some spice kernels:
-furnsh_directory('kernels')
+
+# Define some ground stations:
+frequency = 20E9 # 20GHz (K-Band)
+ground_station1 = Radio(frequency, Antenna(position=[0,0,0]))
+ground_station2 = Radio(frequency, Antenna(position=[0,0,0]))
+ground_station3 = Radio(frequency, Antenna(position=[0,0,0]))
+
+sat_radio = Radio(frequency, Antenna())
 
 # Define the Earth:
 earth_gravity = PointMass(muEarth)
-earth_rotation = SpiceRotation('IAU_EARTH')
-earth = CelestialBody(rotation=earth_rotation, gravity=earth_gravity)
+earth = CelestialBody(gravity=earth_gravity,
+                      sensors=[ground_station1, ground_station2, ground_station3])
 
 # Define the satellite:
 X0 = elements_to_state(muEarth,[7000,0,52.1,0,0,0],0)
-satellite = Spacecraft(state=X0,rotation=np.eye(3))
+satellite = Spacecraft(state=X0, rotation=np.eye(3), sensors=[sat_radio])
+
+# Create the events plan:
+start = datetime(2021,1,1,1)
+end   = datetime(2021,1,1,2)
+events_plan = EventsPlan(start,end)
+
+# Add ground station 1 measurement times:
+gs_times = np.arange(start, end, timedelta(seconds=30)).astype(datetime)
+events_plan.add_measurement_plan(gs_times,ground_station1,'range',sat_radio)
+events_plan.add_measurement_plan(gs_times,ground_station1,'doppler',sat_radio)
+events_plan.add_measurement_plan(gs_times,ground_station2,'range',sat_radio)
+events_plan.add_measurement_plan(gs_times,ground_station2,'doppler',sat_radio)
+events_plan.add_measurement_plan(gs_times,ground_station3,'range',sat_radio)
+events_plan.add_measurement_plan(gs_times,ground_station3,'doppler',sat_radio)
 
 # Create the scene object:
-start = datetime(2021,1,1,12)
-end = datetime(2021,1,1,14)
-scene = Scene(dynamics, [earth,satellite], [start,end])
+scene = TruthScene(dynamics, [earth,satellite], events_plan)
 scene.simulate()
 
-# Plot the results:
-fig = plotly_planets('earth',subsample=3)
-plotly_orbit(satellite._state_log, fig=fig, line_color='red', line_width=5)
+# # Plot the results:
+# fig = plotly_planets('earth',rotation=earth._rotation_log[:,:,-1], subsample=3)
+# plotly_orbit(satellite._state_log,fig=fig, line_width=5, line_color='red')
+# plotly_axisequal(fig)
+# fig.show()
 
-fig.show()
+# Plot the measurements:

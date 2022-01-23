@@ -2,7 +2,7 @@ from datetime import date, timedelta
 import pandas as pd
 import numpy as np
 
-from ceres.spiceutils import SpiceOrbit, furnsh_directory
+from ceres.spiceuitls import SpiceOrbit, furnsh_directory
 from ceres.plotting import plotly_orbit, plotly_axisequal
 
 # Furnsh the appropriate SPICE kernels:

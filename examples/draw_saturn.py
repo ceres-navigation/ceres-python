@@ -1,6 +1,6 @@
 
 from ceres.plotting import plotly_planets,plotly_orbit,plotly_axisequal,plotly_random_color
-from ceres.spiceutils import furnsh_directory, SpiceOrbit, SpiceRotation
+from ceres.spiceuitls import furnsh_directory, SpiceOrbit, SpiceRotation
 from ceres.constants import *
 
 from datetime import datetime, timedelta
