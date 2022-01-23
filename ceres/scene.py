@@ -4,47 +4,60 @@ from typing import Optional
 import numpy as np
 
 from ceres.spiceutils import time_to_et
+from ceres.events import EventsPlan
 
-class Scene:
+class FilterScene:
     """
     """
-    def __init__(self, dynamics, objects: list, time_span: list, events: Optional[list] = None):
+
+class TruthScene:
+    """
+    """
+    def __init__(self, dynamics, objects: list, events_plan: EventsPlan):
         """
         """
         # Convert start and stop times into ephemeris times:
         self._dynamics = dynamics
         self._objects = objects
-        self._events = events
-        self._et_start = time_to_et(time_span[0])
-        self._et_end   = time_to_et(time_span[1])
+        self._events_plan = events_plan
 
-        # Process the events list:
-        # TODO: Use pandas datetime arrays... maybe just time_to_et again?
-
-
-    def simulate(self, max_stepsize: float = 10, min_stepsize: float = 0):
+    def simulate(self, dt_base: float = 30):
         """
         """
-        # TODO: Add adaptive step size...
-        dt = max_stepsize
-
         # Create the timespan:
-        # TODO: This needs to include events (start and end of event, so an additional 2N
-        # entries need to be added for N items in the event list
-        self._tspan = np.arange(self._et_start, self._et_end, dt)
+        event_times = [events[0] for events in self._events_plan]
+        tspan = np.arange(event_times[0], event_times[-1], dt_base).tolist()
+        tspan = tspan + event_times
+        tspan = list(set(tspan))
+        tspan.sort()
+        self._tspan = tspan
 
         # Prepare objects for logging data:
         for object in self._objects:
-            object.preallocate(self._tspan.size)
+            object.preallocate(len(self._tspan))
 
         # Enter the main simulation loop:
-        for idx, tstep in enumerate(self._tspan):
-            #TODO: Have this main simulation loop handle events
+        idx = 0
+        for event_time, events in self._events_plan[1:]:
+            if idx != 0 :
+                dt = (event_time - start_time)/np.ceil((event_time - start_time)/dt_base)
+                tspan_to_next_event = np.arange(start_time, event_time-dt, dt)
+                for tstep in tspan_to_next_event:
+                    # Propagate the dynamics by the current time step:
+                    self._dynamics(tstep, dt, self._objects)
 
-            self._dynamics(tstep, dt, self._objects)
+                    # Log for the current time step:
+                    for object in self._objects:
+                        object.log(idx, tstep+dt)
+                    idx = idx+1
+                tstep = tstep+dt
 
-            for object in self._objects:
-                object.log(idx, tstep)
+            # Process the event:
+            for event in events:
+                complete = False
+                while not complete:
+                    dt, complete = event.execute()
+                    self._dynamics(tstep, dt, self._objects)
 
-
+            start_time = event_time
 
