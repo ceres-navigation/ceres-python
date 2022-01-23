@@ -1,5 +1,6 @@
 # Ignore spice kernels:
 examples/kernels/*
+examples/data/*
 
 # Spinx ignore:
 *.rst
