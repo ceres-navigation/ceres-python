@@ -21,8 +21,16 @@ def furnsh_directory(path_to_directory):
 def time_to_et(input_time):
     """
     """
-    if type(input_time) in [np.float64, float, np.ndarray, int]:
+    if type(input_time) in [np.float64, float, int]:
         et = input_time
+        
+    elif type(input_time) is np.ndarray:
+        if type(input_time[0]) == datetime:
+            et = np.zeros(input_time.size)
+            for idx,time in enumerate(input_time):
+                et[idx] = spice.utc2et(time.strftime("%Y-%m-%d %X"))
+        else:
+            et = input_time
 
     elif type(input_time) is str:
         et = spice.utc2et(input_time)
@@ -32,7 +40,7 @@ def time_to_et(input_time):
         for idx,time_stamp in enumerate(input_time):
             et[idx] = spice.utc2et(time_stamp.strftime("%Y-%m-%d %X"))
 
-    elif type(input_time) is pd.Timestamp or type(input_time) is datetime:
+    elif type(input_time) in [pd.Timestamp, datetime]:
         et = spice.utc2et(input_time.strftime("%Y-%m-%d %X"))
 
     return et

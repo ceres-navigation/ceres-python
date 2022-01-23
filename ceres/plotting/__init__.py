@@ -1,2 +1,1 @@
-from .plotlyutils import plotly_orbit, plotly_axisequal, plotly_random_color
-from .plotlyplanets import plotly_planets
+from .plotlyutils import plotly_planets, plotly_orbit, plotly_axisequal, plotly_random_color, plotly_mesh, plotly_light

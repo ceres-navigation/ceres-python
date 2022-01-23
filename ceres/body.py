@@ -4,7 +4,9 @@ from typing import Union, Sequence, Optional
 from ceres.environment.gravity import GravityField
 from ceres.spiceutils import SpiceOrbit, SpiceRotation
 
-class Body():
+from abc import ABC
+
+class Body(ABC):
     """
     """
     def __init__(self, et: float = 0,
@@ -68,9 +70,13 @@ class Body():
             return self._rotation_calc[self._rotation_calc_et.index(new_et)]
 
     def set_state(self, state):
+        """
+        """
         self._state = state
 
     def set_rotation(self, rotation):
+        """
+        """
         self._rotation = rotation
 
     @property
@@ -101,6 +107,8 @@ class Body():
         self._rotation_log = np.zeros((3,3,num_steps))
 
     def log(self,idx,tstep):
+        """
+        """
         self._time[idx] = tstep
         self._state_log[:,:,idx] = self._state
         self._rotation_log[:,:,idx] = self._rotation
@@ -126,4 +134,3 @@ class Spacecraft(Body):
     """
     def __init__(self, actuators: list = [], **kwds):
         super().__init__(**kwds)
-        return
