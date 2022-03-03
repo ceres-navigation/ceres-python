@@ -32,14 +32,10 @@ Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while deve
 - Add `export BROWSER="/mnt/c/PATH/TO/BROWSER.EXE"` to the bottom of your `~/.bashrc` file
     - This is required for using `plotly` visualizations.
 
-### Windows 10/11:
-- Downalod and install [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
+### Windows 11:
 - Run `sudo apt-get install python-tk`
-- Add `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0` to the bottom of your `~/.bashrc` file
 - Add `export BROWSER="/mnt/c/PATH/TO/BROWSER.EXE"` to the bottom of your `~/.bashrc` file
     - This is required for using `plotly` visualizations.
-- In windows settings, go to `Firewall & network protection` -> `Allow an app through firewall` and make sure that VcXsrv has both public and private checked.
-- Launch VcXsrv with "Disable access control" ticked.
 
 # Develop and Contribute
 To contribute to this project, it is highly recommended that you create a virtual environment with either mamba or conda.
