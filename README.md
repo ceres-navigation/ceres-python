@@ -32,11 +32,6 @@ Releases are [registed on PyPI](https://pypi.org/project/ceres-nav/), while deve
 - Add `export BROWSER="/mnt/c/PATH/TO/BROWSER.EXE"` to the bottom of your `~/.bashrc` file
     - This is required for using `plotly` visualizations.
 
-### Windows 11:
-- Run `sudo apt-get install python-tk`
-- Add `export BROWSER="/mnt/c/PATH/TO/BROWSER.EXE"` to the bottom of your `~/.bashrc` file
-    - This is required for using `plotly` visualizations.
-
 # Develop and Contribute
 To contribute to this project, it is highly recommended that you create a virtual environment with either mamba or conda.
 1. Install mamba or conda:
